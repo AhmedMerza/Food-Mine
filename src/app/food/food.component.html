@@ -1,0 +1,30 @@
+<div class="container">
+    <img [src]="food.img" alt="food.name">
+    <div class="details">
+        <div class="header">
+            <span class="name">
+                {{ food.name }}
+            </span>
+            <span (click)="food.favorite = !food.favorite" class="favorite" [ngClass]="{not: !food.favorite}">
+                ❤
+            </span>
+        </div>
+        <div class="footer">
+            <div class="cookTime">
+                <span>
+                    Time to cook is about {{ food.cookTime }} minutes
+                </span>
+            </div>
+            <div class="price">
+                <span>
+                    BD {{ food.price }}
+                </span>
+            </div>
+            <div class="addToCart">
+                <button (click)="onAddToCart(food)">
+                    Add to cart
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
