@@ -21,8 +21,8 @@
                 </span>
             </div>
             <div class="addToCart">
-                <button (click)="onAddToCart(food)">
-                    Add to cart
+                <button (click)="onAddToCart(food)" [ngClass]="{alert: alert}">
+                    {{ addToCartText }}
                 </button>
             </div>
         </div>

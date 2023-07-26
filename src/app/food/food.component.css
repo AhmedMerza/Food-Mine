@@ -92,3 +92,6 @@ button:hover {
     opacity: 0.9;
 }
 
+.alert {
+    background-color: rgb(12, 186, 12);
+}

@@ -58,5 +58,9 @@ export class CartService {
     return this.cart;
   }
 
+  getCartItem (id: number) {
+    return this.cart.food.filter((item) => { return item.id === id});
+  }
+
 
 }
