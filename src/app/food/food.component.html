@@ -1,4 +1,5 @@
-<div class="container">
+<app-notfound *ngIf="!food"></app-notfound>
+<div class="container" *ngIf="food">
     <img [src]="food.img" alt="food.name">
     <div class="details">
         <div class="header">

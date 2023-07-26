@@ -1,5 +1,5 @@
 <app-notfound message="Cart is Empty!" resetLinkText="Back to Home" *ngIf="cart.food.length == 0"></app-notfound>
-<div class="container" *ngIf="cart.food.length > 0">
+<div class="container" *ngIf="cart.food.length > 0 && !alert">
     <ul>
         <li *ngFor="let food of cart['food']; let i = index">
             <div>
@@ -41,5 +41,15 @@
                 BD {{ cart.totalPrice }}
             </div>
         </div>
+        <div>
+            <button class="checkout-btn" (click)="onCheckout()">
+                Checkout
+            </button>
+        </div>
     </div>
 </div>
+< <div class="checkoutAlert" *ngIf="alert">
+    <div class="alert">
+        <span>Bon appétit</span>
+    </div>
+    </div>

@@ -9,6 +9,7 @@ import { FoodService } from '../services/food.service';
 })
 export class CartComponent {
   cart = {} as cart;
+  alert: boolean = false;
 
   constructor(private foodService: FoodService, private cartService: CartService) {
     this.setCart();
@@ -26,6 +27,16 @@ export class CartComponent {
   removeFood (id: number) {
     this.cartService.removeFood(this.foodService.getFood(id));
     this.setCart();
+  }
+
+  onCheckout () {
+    this.alert = true;
+    setTimeout(() => {
+      this.alert = false;    
+      this.cartService.clearCart();
+      this.setCart();
+    }, 2000);
+
   }
 
 }

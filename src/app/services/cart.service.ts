@@ -62,5 +62,10 @@ export class CartService {
     return this.cart.food.filter((item) => { return item.id === id});
   }
 
+  clearCart () {
+    this.cart.food = [];
+    this.cart.totalPrice = 0;
+  }
+
 
 }
